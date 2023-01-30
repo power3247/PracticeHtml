@@ -1,0 +1,93 @@
+.profile {
+  width: 200px;
+  display: block;
+  margin: auto;
+  text-align: center;
+
+}
+
+
+.lion-style {
+  width: 100px;
+  display: block;
+  margin: auto;
+}
+
+h4 {
+  font-weight: 700;
+  font-size: 23px
+}
+
+.profile-text {
+  text-align: center;
+  font-size: 25px;
+}
+
+.json {
+  font-size: 15px;
+}
+
+.mybold {
+  font-weight: 700;
+}
+
+.box {
+  width: 200px;
+  background: cadetblue;
+  margin: 10px;
+  padding: 40px;
+  border-radius: 5px;
+  /*  이런게 있다 하고 넘어가자 필요할만 찾자*/
+  /*  display: block;*/
+  margin: 10px auto 10px auto;
+  /*  가운데 정렬, div(p, h 도 )는 display block 속성을 이미 가지고 있음 생략가능*/
+  font-size: 10px;
+  color: white;
+  box-shadow: 5px 5px black;
+}
+
+/*layout1.html*/
+
+.container {
+  width: 800px;
+}
+
+.header {
+  width: 100%;
+  /*  ㄴ 내 상위요소의 폭에 100% 해줘*/
+  height: 100px;
+  background: aquamarine;
+}
+
+.left-menu {
+  width: 20%;
+  height: 400px;
+  background: cornflowerblue;
+  /*  float left는 붕뛰어서 왼쪽정렬*/
+  /*  float: left;*/
+  /*  float 안쓰고 가로로 배치하는법*/
+  display: inline-block;
+  vertical-align: top;
+  /*  ㄴ 상하정렬 display가 inlinebloc inline 인요소에만 적용됨*/
+  /*  이유 : baseline(글씨 바로밑에 존재하는 선 q 나 g 가 아래로 삐져나갔을때 걸치는 가상의선 (공책의 실선 느낌)) 옆에 존재하면 display : inline-block 같은 요소들이 글자처럼 baseline 위에 오려고 그럼*/
+}
+
+
+
+.right {
+  width: 80%;
+  height: 400px;
+  background: coral;
+  /*  float: right;*/
+  display: inline-block;
+  font-size: 15px;
+
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  background: grey;
+  /*  clear: both;*/
+  /*  float 위치 무시 버그 해결법 귀찮을떈 both 쓰자 */
+}

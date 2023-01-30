@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link href="css/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <img class="profile" src="public/lion.png" alt="찾는중" />
+  <h4 class="profile-text mybold json">Harry</h4>
+  <p class="profile-text profile json">front-end developer</p>
+  <div class="R"></div>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script>
+    // setTimeout(() => {
+    //   console.log(2)
+    // }, 1000);
+    // function 첫쨰함수(구멍) {
+    //   console.log(1);
+    //   구멍();
+    // }
+    // function 둘쨰함수() {
+    //   console.log(2);
+    // }
+    // 첫쨰함수(function() {
+    //   둘째함수(function() {
+    //     셋째함수(function() {
+
+    //     })
+    //   })
+    //   console.log(2)
+    // }); //콜백함수는 그저 디자인 패턴일 뿐이다 (동기 비동기 이런거 아님) 동기비동기는 web API 뿐이다
+
+    // 첫째함수().then(function() { // promise도 코드 디자인 패턴일 뿐이다 동기비동기아님
+
+    // }).then(function() {
+
+    // })
+    // 코드 디자인 패턴
+    var 프로미스 = new Promise(function(resolve, reject) {
+      // 얜 실패 또는 성공에따라서 상태가 변함
+      // settimeout ajax 요청 같은거에 주로쓰임
+      //프로미스는 성공 실패 판정 기계!!
+
+      // resolve(); //성공 (이 함수가실행됬다 = 성공판정 내림) => then 실행해줌
+      // reject(); // 실패 (이 실행됬다) = 실패판정 => catch 실행해줌
+
+      // var 어려운연산 = 1 + 1; //js 는 이런 생코들은 동기식 연산을 해준다 그러니 차례로 써도됨
+      // resolve(어려운연산); //성공
+      // reject();//실패
+      setTimeout(function() {
+        resolve();
+      }, 5000);
+    }); //promise 성공 실패 판정 기계다! ~경우 성공, ~경우 실패 짜줘야됨 (성공,실패)
+    프로미스
+      .then(function(결과) {
+        // 프로미스가 성공할 경우 실행할 코드 이것도 콜백함수 대신 다양한기능
+        console.log("성공했어요");
+      })
+      // })
+      .catch(function() {
+        console.log("실패");
+        // 프로미스가 실패할 경우 실행할 코드 이것도 콜백함수 대신 다양한기능
+        // console.log("실패했어여!");
+      });
+    // .finally(function() { // 성공이든 실패든 뭔가 일어났을때 실행해 주세요!
+    // 프로미스는 그냥 코드 위에처럼 성공 실패시 실행될코드를 깔끔하게 쓸려고 쓰는것일 뿐이다.
+    // 동기 비동기 마법의 기계 이런거 아니다 전혀 상관 없다.! 그저 코딩스타일이다.
+
+    // })
+    fetch(); // 항상 프로미스를 리턴함 그러면 then catch 를 쓸수가 있음
+
+  </script>
+</body>
+
+</html>

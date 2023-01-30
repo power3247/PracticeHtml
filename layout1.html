@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link href="css/main.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!--float 사용법-->
+    <div class="container" style="font-size: 0px">
+      <!--  font-size같은 inherit 되는 속성은 중요도가 낮기때문에 자식태그에서 새로 써주면 무시됨-->
+      <div class="header"></div>
+      <div class="left-menu"></div>
+
+      <div class="right">안녕하세요</div>
+
+      <div class="footer">
+        <!--    float 버그해결은 다음요소를 clear:both 로 해결가능-->
+        <!--
+      1. inline-block 쓸라면 공백 제거해야됨 
+      2. 글씨를 쓸경우 난리나니까   vertical-align: top; 같은거 써줘라
+-->
+      </div>
+    </div>
+  </body>
+</html>
