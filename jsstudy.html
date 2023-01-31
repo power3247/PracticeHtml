@@ -12,7 +12,8 @@
   <h4 class="profile-text mybold json">Harry</h4>
   <p class="profile-text profile json">front-end developer</p>
   <div class="R"></div>
-  <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
   <script>
     // setTimeout(() => {
     //   console.log(2)
@@ -39,7 +40,7 @@
 
     // })
     // 코드 디자인 패턴
-    var 프로미스 = new Promise(function(resolve, reject) {
+    var 프로미스 = new Promise(function (resolve, reject) {
       // 얜 실패 또는 성공에따라서 상태가 변함
       // settimeout ajax 요청 같은거에 주로쓰임
       //프로미스는 성공 실패 판정 기계!!
@@ -50,17 +51,17 @@
       // var 어려운연산 = 1 + 1; //js 는 이런 생코들은 동기식 연산을 해준다 그러니 차례로 써도됨
       // resolve(어려운연산); //성공
       // reject();//실패
-      setTimeout(function() {
+      setTimeout(function () {
         resolve();
       }, 5000);
     }); //promise 성공 실패 판정 기계다! ~경우 성공, ~경우 실패 짜줘야됨 (성공,실패)
     프로미스
-      .then(function(결과) {
+      .then(function (결과) {
         // 프로미스가 성공할 경우 실행할 코드 이것도 콜백함수 대신 다양한기능
         console.log("성공했어요");
       })
       // })
-      .catch(function() {
+      .catch(function () {
         console.log("실패");
         // 프로미스가 실패할 경우 실행할 코드 이것도 콜백함수 대신 다양한기능
         // console.log("실패했어여!");
@@ -71,7 +72,6 @@
 
     // })
     fetch(); // 항상 프로미스를 리턴함 그러면 then catch 를 쓸수가 있음
-
   </script>
 </body>
 
