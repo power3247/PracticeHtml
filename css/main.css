@@ -4,7 +4,9 @@
   margin: auto;
   text-align: center; 
 }
-
+.box body{
+  display: none;
+}
 
 .lion-style {
   width: 100px;
@@ -31,31 +33,39 @@ h4 {
 .container {
   width: 600px;
   height : 150px;
-  font-size: 0; 
-  vertical-align: top;
-  font-family:naver
+  /* font-size: 0; 
+  vertical-align: top; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 
 }
 .left-side{
   width:80%;
-  display: inline-block;
-  vertical-align: top;
+  /* display: inline-block;
+  vertical-align: top;  */
+  float: left;
 }
 
 .right-side{
   width:20%;
   height: 100%;
-  display: inline-block;
+  float: left;
+  /* display: inline-block; */
   background-image: url(/public/profile.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;  
-  vertical-align: top;
+  /* vertical-align: top; */
 } 
 .topside{
   height: 40px;
   width: 100%;  
-  font-size: 10px; 
+  font-size: 10px;  
+  float:left;
+}
+h2{
+  margin-top:0px;
 }
 p{
   font-size: 12px;
@@ -65,27 +75,36 @@ p{
 .bottom-side{
   height:110px;
   width: 100%; 
-  font-size: 11px;
-  padding-top: 5px;
-
+  font-size: 11px; 
+  margin-top: 5px;
 }
 .myimg{
+  float: left;
   width: 40px;
   height:100%;
   background-image: url(/public/index.png);
-  display: inline-block; 
+  /* display: inline-block;  */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;  
-  vertical-align: top;
+  /* vertical-align: top; */
   border-radius: 80px;
   overflow: hidden;
   margin-right: 10px;
 
 }
 .myname {
-  vertical-align: top;
+  /* vertical-align: top;
+  display: inline-block; */
+  float: left;
+}
+.navbar li {
   display: inline-block;
+
+}
+
+.a{ 
+  background-image: none; 
 }
 
 .box {
